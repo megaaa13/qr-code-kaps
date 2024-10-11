@@ -1,7 +1,7 @@
 import PLACEHOLDER_IMAGE_URL from '@/assets/placeholder_image.png'
-import GeeksHackingConfig from '@/assets/presets/geekshacking.json'
-import SpDigitalConfig from '@/assets/presets/spdigital.json'
-import GovtechStackCommunityConfig from '@/assets/presets/govtech_stack.json'
+import KAPConfig from '@/assets/presets/kap.json'
+import KAPBConfig from '@/assets/presets/kap_blue.json'
+import FancyConfig from '@/assets/presets/fancy.json'
 import type { DrawType, Options as StyledQRCodeProps } from 'qr-code-styling'
 
 export interface CustomStyleProps {
@@ -275,42 +275,28 @@ export const pejuangKodePreset: Preset = {
   style: { borderRadius: '22px', background: '#ffffff' }
 }
 
-export const geeksHackingPreset = {
+export const KAPPreset = {
   ...defaultPresetOptions,
-  name: 'GeeksHacking',
-  ...GeeksHackingConfig.props,
-  style: GeeksHackingConfig.style
+  name: 'KAP - Noir et Blanc',
+  ...KAPConfig.props,
+  style: KAPConfig.style
 } as Preset
 
-export const spDigitalPreset = {
+export const KAPBPreset = {
   ...defaultPresetOptions,
-  name: 'SP Digital',
-  ...SpDigitalConfig.props,
-  style: SpDigitalConfig.style
+  name: 'KAP - Bleu et Blanc',
+  ...KAPBConfig.props,
+  style: KAPBConfig.style
 } as Preset
 
-export const govtechStackCommunityPreset = {
+export const FancyPreset = {
   ...defaultPresetOptions,
-  name: 'GovTech - Stack Community',
-  ...GovtechStackCommunityConfig.props,
-  style: GovtechStackCommunityConfig.style
+  name: 'Default',
+  ...FancyConfig.props,
+  style: FancyConfig.style
 } as Preset
 
 export const allPresets: Preset[] = [
-  defaultPreset,
-  ...[
-    padletPreset,
-    uiliciousPreset,
-    supabaseGreenPreset,
-    supabasePurplePreset,
-    vercelLightPreset,
-    vercelDarkPreset,
-    viteConf2023Preset,
-    vueJsPreset,
-    vuei18nPreset,
-    pejuangKodePreset,
-    geeksHackingPreset,
-    spDigitalPreset,
-    govtechStackCommunityPreset
-  ].sort((a, b) => a.name.localeCompare(b.name))
+  FancyPreset,
+  ...[KAPPreset, KAPBPreset].sort((a, b) => a.name.localeCompare(b.name))
 ]

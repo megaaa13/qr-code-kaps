@@ -1,0 +1,15 @@
+{
+  "props": {
+    "data": "https://kapuclouvain.be/",
+    "image": "",
+    "width": 200,
+    "height": 200,
+    "margin": 0,
+    "dotsOptions": { "color": "#ffffff", "type": "classy" },
+    "cornersSquareOptions": { "color": "#ffffff", "type": "extra-rounded" },
+    "cornersDotOptions": { "color": "#ffffff", "type": "square" },
+    "imageOptions": { "margin": 0 },
+    "qrOptions": { "errorCorrectionLevel": "H" }
+  },
+  "style": { "borderRadius": "0px", "background": "#000000" }
+}
